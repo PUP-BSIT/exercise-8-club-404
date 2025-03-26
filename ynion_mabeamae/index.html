@@ -69,10 +69,10 @@
     <div class="my-picture">
       <h2>Gallery</h2>
       <div class="photos">
-        <img src="./images/arashi.png" alt="Arashi" />
+        <img src="./images/arashi.jpg" alt="Arashi" />
         <img src="./images/crush.jpg" alt="2ne1" />
         <img src="./images/jisu.jpg" alt="Jisoo" />
-        <img src="./images/blackpink.png" alt="Blackpink" />
+        <img src="./images/blackpink.jpg" alt="Blackpink" />
         <img src="./images/LP.jpg" alt="Lighter and Princess" />
         <img src="./images/babymonster.jpg" alt="Babymonster" />
       </div>
@@ -119,15 +119,20 @@
       </ul>
       <div class="comment-info">
         <h2>Comment Section</h2>
-        <div id="comment_container">
-          <div class="comments">
-            <p>Arroyo: It is a great goal to achive! Work well.</p>
+        <div class="comment-container" id="comment">
+          <div class="upper-tags">
+            <div class="user-tag"><strong>Arroyo:</strong></div>
+            <div class="user-comment">
+              It is a great goal to achieve! Work well.
+            </div>
           </div>
-          <div class="comments">
-            <p>Delima: I hope you achieve your goals!</p>
+          <div class="upper-tags">
+            <div class="user-tag"><strong>Delima:</strong></div>
+            <div class="user-comment">I hope you achieve your goals!</div>
           </div>
-          <div class="comments">
-            <p>˚ʚ♡ɞ˚Pat: 𐙚⋆°｡⋆ You're making great progress!</p>
+          <div class="upper-tags">
+            <div class="user-tag"><strong>˚ʚ♡ɞ˚Pat:</strong></div>
+            <div class="user-comment">𐙚⋆°｡⋆ You're making great progress!</div>
           </div>
         </div>
         <h3>Add a comment</h3>
@@ -138,8 +143,7 @@
               type="text"
               name="name"
               id="comment_name"
-              oninput="validateComment()"
-            />
+              oninput="validateComment()"/>
           </div>
           <div>
             <label for="comment_text">Comment</label>
@@ -152,7 +156,13 @@
               oninput="validateComment()"
             ></textarea>
           </div>
-          <button id="comment_button" type="button" disabled>Comment</button>
+          <button
+            id="comment_button"
+            type="button"
+            onclick="addComment()"
+            disabled>
+              Comment
+          </button>
         </form>
       </div>
     </section>
