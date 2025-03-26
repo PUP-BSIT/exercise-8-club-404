@@ -251,10 +251,30 @@ body {
     top: 800px;
     left: 5px;
     width: 382px;
-    height: 239px;
+    height: auto;
     background-color: gray;
     border: 5px solid #655034;
     border-radius: 15px;
+  }
+  
+  .commenter {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  #comment_container > h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .comment-content {
+    background-color: #5F6062;
+    border-radius: 20px;   
+  }
+
+  #comment_container > p {
+    font-size: 20px;
+    text-align: center;
   }
 }
 
@@ -335,10 +355,30 @@ body {
     top: 709px;
     left: 5px;
     width: 455px;
-    height: 239px;
+    height: auto;
     background-color: gray;
     border: 5px solid #655034;
     border-radius: 15px;
+  }
+
+  .commenter {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  #comment_container > h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .comment-content {
+    background-color: #5F6062;
+    border-radius: 20px;   
+  }
+
+  #comment_container > p {
+    font-size: 20px;
+    text-align: center;
   }
 
   #testimonial {
@@ -439,10 +479,23 @@ body {
     top: 800px;
     left: 5px;
     width: 887px;
-    height: 322px;
+    height: auto;
     background-color: gray;
     border: 5px solid #655034;
     border-radius: 15px;
+    height: auto;
+    font-size: 19px;
+  }
+
+  .comment-content {
+    background-color: #5F6062;
+    text-align: center;
+    border-radius: 20px;
+  }
+
+  .commenter {
+    font-size: 40px;
+    text-align: center;
   }
 
   #comment_container > h2 {
@@ -451,7 +504,7 @@ body {
   }
 
   #comment_container > p {
-    font-size: 19px;
+    font-size: 40px;
   }
 
   #works {
@@ -586,6 +639,30 @@ body {
     width: 374px;
     height: 161px;
   }
+
+  #comment_container {
+    height: auto;
+  }
+
+  .comment-content {
+    background-color: #5F6062;
+    text-align: center;
+    border-radius: 20px;
+  }
+
+  .commenter {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  #comment_container > h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  #comment_container > p {
+    font-size: 40px;
+  }
 }
 
 @media (min-width: 1025px) {
@@ -599,19 +676,27 @@ body {
     top: 800px;
     left: 5px;
     width: 887px;
-    height: 322px;
+    height: auto;
     background-color: gray;
     border: 5px solid #655034;
     border-radius: 15px;
   }
 
-  #comment_container > h2 {
+  .comment-content {
+    background-color: #5F6062;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 20px;
+  }
+
+  .commenter {
     font-size: 40px;
     text-align: center;
   }
 
-  #comment_container > p {
-    font-size: 19px;
+  #comment_container > h2 {
+    font-size: 40px;
+    text-align: center;
   }
 
   .add-comment > h2 {
