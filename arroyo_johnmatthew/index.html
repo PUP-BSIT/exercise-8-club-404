@@ -124,14 +124,27 @@
               required
               onInput="buttonEnabler()"
             ></textarea>
-            <button type="button" id="comment_button" disabled>Submit</button>
+            <button 
+                type="button" 
+                id="comment_button" 
+                onClick="displayComment()"
+                disabled>
+                  Submit
+            </button>
             <script src="script.js"></script>
           </form>
           <div id="comment_container">
             <h2>Comments:</h2>
-            <p>I hope you achieve your goals! - Justine</p>
-            <p>𐙚⋆°｡⋆That's a great goal! - Pat˚ʚ♡ɞ˚</p>
-            <p>Achieve your goals, I know you can do it! - Bea</p>
+            <h2 class="commenter">Justine</h2>
+            <p class="comment-content">
+              I hope you achieve your goals! - Justine
+            </p>
+            <h2 class="commenter">Patricia</h2>
+            <p class="comment-content">𐙚⋆°｡⋆That's a great goal! - Pat˚ʚ♡ɞ˚</p>
+            <h2 class="commenter">Bea</h2>
+            <p class="comment-content">
+              Achieve your goals, I know you can do it! - Bea
+            </p>
           </div>
         </div>
       </div>
