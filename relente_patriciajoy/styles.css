@@ -213,6 +213,28 @@ li {
     transform: scale(1.05);
 }
 
+.fa-sparkles, .fa-heart {
+    display: inline-block;  /* Ensures animations work */
+    color: red;
+    animation: sparkles 1.5s infinite;
+}
+
+@keyframes sparkles {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.2); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.fa-sparkles {
+    color: gold;
+    animation: sparkles 1.5s infinite;
+}
+
+.fa-heart {
+    color: red;
+    animation: sparkles 2s infinite;
+}
+
 .my-gallery {
     margin-top: 10px;
     background: linear-gradient(to bottom, #fce4ec, #f8bbd0);
@@ -336,7 +358,21 @@ li {
     border: none;
     border-radius: 50px;
     background: linear-gradient(270deg, #e62aad, #fa6d86);
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.contact-left 
+input:valid:required ~ 
+input:valid:required ~ 
+textarea:valid:required ~ 
+button {
+    opacity: 1;
+    pointer-events: auto;
     cursor: pointer;
+    background: linear-gradient(270deg, #e62aad, #fa6);
+    transition: all 0.3s ease;
 }
 
 .contact-right img {
@@ -404,53 +440,63 @@ li {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.comments-list {
-    margin-bottom: 10px;
-}
-
-#comment_form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-#comment_form input, #comment_form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #f8a2c2;
-    border-radius: 5px;
-}
-
 #comment_form textarea {
     resize: none;
-    height: 80px;
+    height: 100px;
+    width: 90%;
+    border: none;
+    border-radius: 10px;
+    font-size: small;
+    text-align: center;
 }
 
-.comment-box {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+#comment_form input,
+#comment_form textarea,
+#comment_btn {
+    width: 100%; 
     padding: 10px;
-    background-color: #ffe6f0;
     border-radius: 5px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    border: 1px solid #ffb6c1;
+    font-size: 16px;
+    margin: auto;
 }
 
 #comment_name,
 #comment_text {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
+    margin: 0 auto;
     border: 1px solid #f8a2c2;
+    color: #50043c;
+    box-sizing: border-box;
     border-radius: 5px;
+    font-family: 'Comic Sans MS', cursive;
+    font-style: italic;
+    text-align: center;
 }
+
+.comment strong {
+    color: #944d75;
+}
+
+.comment {
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    border: 1px solid #f8a2c2;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
 #comment_btn {
     background: linear-gradient(90deg, #ff758c, #ff7eb3);
     color: white;
+    font-weight: bold;
     background-color: #ff85a2;
     border: none;
     padding: 10px 20px;
-    border-radius: 8px;
+    border-radius: 5px;
+    pointer-events: auto;
     cursor: pointer;
     font-size: 16px;
     opacity: 1;
@@ -474,6 +520,14 @@ li {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+#comment_form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 #comment_form textarea:focus {
     border: 2px solid #a363aa;
     outline: none; 
@@ -484,26 +538,13 @@ li {
     outline: none; 
 }
 
-.comment-list {
+#comment_list {
     max-height: 300px;
     overflow-y: auto;
     margin-bottom: 15px;
     padding: 10px;
     border-radius: 5px;
     background-color: #ffe6f0;
-}
-
-.comment strong {
-    color: #944d75;
-}
-
-.comment {
-    background-color: #fff;
-    padding: 8px;
-    border-radius: 5px;
-    margin-bottom: 8px;
-    border: 1px solid #f8a2c2;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 input, textarea {
@@ -522,8 +563,9 @@ input:focus, textarea:focus {
     box-shadow: 0 0 5px violet;
 }
 
-button {
+button:disabled {
     pointer-events: none;
+    opacity: 0.5;
 }
 
 @media (max-width: 320px) {
@@ -549,6 +591,10 @@ button {
         width: 50%;
         margin: auto;
     }
+
+    #comment_form {
+        max-width: 90%;
+    }
 } 
 
 @media (min-width: 321px) and (max-width: 375px) {
@@ -563,6 +609,10 @@ button {
     .contact-left-title h2 {
         font-size: 1.8rem;
     }
+
+    #comment_form {
+        max-width: 90%;
+    }
 }
 
 @media (min-width: 376px) and (max-width: 425px) {
@@ -574,6 +624,10 @@ button {
     .contact-left-title hr {
         width: 60%;
         margin: auto;
+    }
+
+    #comment_form {
+        max-width: 90%;
     }
 }
 
@@ -616,6 +670,10 @@ button {
 
     .contact-container {
         height: 50vh;
+    }
+
+    #comment_form {
+        max-width: 90%;
     }
 }
 
