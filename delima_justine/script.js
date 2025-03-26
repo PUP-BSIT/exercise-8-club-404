@@ -1,14 +1,31 @@
 // Function to check if the input and textarea are filled.
-function checkInput() {
-	let username = document.getElementById("input_name");
-	let usrComment = document.getElementById("comment_area");
+function checkComment() {
+	let name = document.getElementById("input_name");
+	let comment = document.getElementById("comment");
+	let submitButton = document.getElementById("comment_btn");
 
-	if(usrComment.value.length > 0 && username.value.length > 0) {
-		document.getElementById("comment_btn").disabled = false;
-		document.getElementById("comment_btn").style.backgroundColor = 
-			"#76ABAE";
+	if(name.value.length && comment.value.length) {
+		submitButton.disabled = false;
 	} else {
-		document.getElementById("comment_btn").disabled = true;
-		document.getElementById("comment_btn").style.backgroundColor = "";
+		submitButton.disabled = true;
 	}
+}
+
+// Function to add comment
+function addComment() {
+	let commentSection = document.querySelector(".comments");
+	let name = document.getElementById("input_name");
+	let comment = document.getElementById("comment");
+	let submitButton = document.getElementById("comment_btn");
+	const newName = `<h2 class="comment-name">${name.value}</h2>`;
+	const newComment = `<p class="new-comment">${comment.value}</p>`;
+
+	if (!submitButton.disabled) {
+		commentSection.insertAdjacentHTML("beforeend", newName);
+		commentSection.insertAdjacentHTML("beforeend", newComment);
+	}
+	
+	name.value = "";
+	comment.value = "";
+	submitButton.disabled = true;
 }

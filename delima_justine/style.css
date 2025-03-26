@@ -166,7 +166,6 @@ h1 {
     margin-bottom: 10px;
 }
 
-
 .third-row {
     display: flex;
     justify-content: space-evenly;
@@ -321,7 +320,6 @@ legend {
         border: 5px solid var(--color2);
     }
 
-    /* target: fieldset */
     fieldset {
         height: 330px;
         width: 251px;
@@ -381,7 +379,7 @@ legend {
         border-radius: 10px;
     }
 
-    #comment_area {
+    #comment {
         width: 225px;
         border-radius: 10px;
     }
@@ -396,7 +394,7 @@ legend {
         gap: 10vh;
     }
 
-    .comment-hdr-container h2 {
+    .comments h2 {
         color: var(--color4);
         text-align: center;
         background-color: var(--color2);
@@ -404,7 +402,13 @@ legend {
         margin: 0;
     }
 
-    .comment-hdr-container p {
+    .comments .comment-name {
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+
+    .comments .new-comment {
+        margin: 0;
         color: var(--color4);
         border: 2px dashed var(--color2);
         text-align: center;
@@ -539,6 +543,7 @@ legend {
         padding: 4px 15px;
         background-color: var(--color5); 
     }
+
 
     .testimonials-container {
         padding: 50px 50px;
